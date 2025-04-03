@@ -2,7 +2,7 @@
   "name": "aahil.io",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://aahil52.github.io/aahil.io",
+  "homepage": "https://aahil.io",
   "type": "module",
   "scripts": {
     "predeploy" : "npm run build",
