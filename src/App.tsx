@@ -10,19 +10,24 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
 
   return (
-    <div
-      className="min-h-screen text-white px-6 py-12 relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${cherryBlossoms})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundBlendMode: "soft-light",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      <div className="absolute inset-0 bg-black/35 z-0"></div>
-      <div className="relative max-w-4xl mx-auto space-y-16 z-10">
+    <div className="min-h-screen relative overflow-x-hidden">
+      {/* Fixed background image */}
+      <div
+        className="fixed inset-0 -z-10"
+        style={{
+          backgroundImage: `url(${cherryBlossoms})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundBlendMode: "soft-light",
+        }}
+      />
+
+      {/* Fixed black overlay */}
+      <div className="fixed inset-0 bg-black/35 -z-10" />
+
+      {/* Foreground content */}
+      <div className="relative max-w-4xl mx-auto space-y-16 z-10 px-6 py-12">
         <motion.header
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
