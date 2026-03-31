@@ -5,15 +5,15 @@ export const blogPosts = [
       content: (
         <>
           <p className="text-zinc-300">
-            This is where excerpts of my Medium posts will go.
+            This is where excerpts of my Substack posts will go.
           </p>
           <a
-            href="https://medium.com/@yourhandle/repiq"
+            href="https://substack.com/@aahillxk/posts"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-white hover:text-pink-300 hover:underline block mt-4"
           >
-            Visit my Medium →
+            Visit my Substack →
           </a>
         </>
       )

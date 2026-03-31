@@ -4,13 +4,15 @@ import { Button } from "@/components/ui/button";
 export default function Navbar({ setActiveSection }: { setActiveSection: (section: string) => void }) {
   return (
     <div>
+      <h1 className="text-5xl font-bold leading-tight">hey, i’m aahil</h1>
+      <p className="text-lg text-zinc-300">engineer • builder • lifelong learner</p>
       <div className="flex space-x-4">
-        <a href="mailto:your@email.com">
+        <a href="mailto:lakhaniaahil@uga.edu">
           <Button variant="ghost" size="icon" className="cursor-pointer">
             <Mail className="h-5 w-5" />
           </Button>
         </a>
-        <a href="https://github.com/yourusername" target="_blank">
+        <a href="https://github.com/aahil52" target="_blank">
           <Button variant="ghost" size="icon" className="cursor-pointer">
             <Github className="h-5 w-5" />
           </Button>

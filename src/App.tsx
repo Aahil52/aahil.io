@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Home from "./sections/Home";
@@ -8,6 +8,30 @@ import cherryBlossoms from "./assets/cherryBlossoms.png";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
+  const [bgReady, setBgReady] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = cherryBlossoms;
+    img.onload = () => {
+      setBgReady(true);
+    }
+  }, []);
+
+  if (!bgReady) {
+    return (
+      <div className="fixed inset-0 bg-black flex items-center justify-center">
+        <img 
+          src="/favicon.ico" 
+          alt="Loading..."
+          width={100} 
+          height={100} 
+          className="animate-spin"
+        />
+      </div>
+    );
+  }
+  
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
@@ -34,8 +58,6 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="space-y-4"
         >
-          <h1 className="text-5xl font-bold leading-tight">hey, i’m aahil</h1>
-          <p className="text-lg text-zinc-300">engineer • builder • lifelong learner</p>
           <Navbar setActiveSection={setActiveSection} />
         </motion.header>
 
