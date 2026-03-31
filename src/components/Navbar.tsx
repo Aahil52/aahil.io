@@ -28,6 +28,9 @@ export default function Navbar({ setActiveSection }: { setActiveSection: (sectio
         <button onClick={() => setActiveSection("blog")} className="cursor-pointer">
           blog
         </button>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          resume
+        </a>
       </nav>
     </div>
   );
