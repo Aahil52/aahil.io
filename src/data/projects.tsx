@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "RepIQ",
-    subtitle: "wearable AI",
+    subtitle: "An in-progress wearable AI system designed to estimate reps until muscular failure using EMG and IMU data. I'm currently building the BLE data pipeline and beginning to collect labeled training data with custom hardware.",
     content: (
       <>
         <p className="text-zinc-300 leading-relaxed">
@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     title: "Anamnesis",
-    subtitle: "semantic memory",
+    subtitle: "A personal semantic memory tool. It indexes past conversations with AI chatbots like ChatGPT using retrieval-augmented generation (RAG) to surface meaningful ideas and self-reflections.",
     content: (
       <>
         <p className="text-zinc-300 leading-relaxed">
@@ -42,7 +42,7 @@ export const projects = [
   },
   {
     title: "VibeVector",
-    subtitle: "music discovery",
+    subtitle: "A conceptual music recommendation engine that maps songs into a vibe space using high-dimensional embeddings. The goal is to enable genre-free, emotionally resonant discovery.",
     content: (
       <>
         <p className="text-zinc-300 leading-relaxed">

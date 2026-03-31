@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 interface ListItem {
   title: string;
   subtitle?: string;
+  date?: string;
   content: ReactNode;
 }
 
@@ -35,7 +36,10 @@ export default function ExpandableList({ heading, items }: ExpandableListProps) 
                     {item.title}
                   </h3>
                   {item.subtitle && (
-                    <p className="text-sm text-zinc-400">{item.subtitle}</p>
+                    <p className="text-sm text-zinc-300">{item.subtitle}</p>
+                  )}
+                  {item.date && (
+                    <p className="text-xs text-zinc-500">{item.date}</p>
                   )}
                 </CardContent>
               </Card>
