@@ -1,7 +1,7 @@
 export const blogPosts = [
     {
       title: "Welcome to My Blog",
-      date: "2025-04-03",
+      subtitle: "2025-04-03",
       content: (
         <>
           <p className="text-zinc-300">
