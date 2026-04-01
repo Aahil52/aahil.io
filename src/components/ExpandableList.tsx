@@ -65,7 +65,7 @@ export default function ExpandableList({ heading, items, basePath }: ExpandableL
           <Card className="bg-zinc-800/80 border-white">
             <CardContent className="p-6 space-y-4">
               <div className="flex justify-between items-center">
-                <h3 className="text-2xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-white">
                   {expandedItem.title}
                 </h3>
                 <button
