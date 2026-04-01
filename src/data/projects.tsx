@@ -12,7 +12,7 @@ import characterization from "@/assets/accelerometer/characterization.webp";
 
 export const projects = [
   {
-    slug: "macro-electromechanical-accelerometer",
+    slug: "accelerometer",
     title: "Macro Electromechanical Accelerometer",
     subtitle: "First-principles differential capacitive accelerometer built at 1000x MEMS scale from 3D-printed PLA and copper-foil tape. Linear with 0.41 V/g sensitivity and R² = 0.99.",
     content: (
@@ -164,7 +164,7 @@ export const projects = [
   )
 },
   {
-    slug: "cordic-axi-peripheral",
+    slug: "cordic",
     title: "CORDIC AXI Peripheral",
     subtitle: "Iterative shift-and-add trigonometry in RTL. A CORDIC peripheral with AXI4-Lite bus integration for SiliconJackets Tapeout 3.",
     expandable: false,
