@@ -1,41 +1,61 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./sections/Home";
 import About from "./sections/About";
 import Blog from "./sections/Blog";
-import cherryBlossoms from "./assets/cherryBlossoms.png";
+import Career from "./sections/Career";
+import Projects from "./sections/Projects";
+import cherryBlossoms from "./assets/cherryBlossoms.webp";
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <motion.div
+      key={location.pathname.split('/')[1]}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      <Routes location={location}>
+        <Route path="/" element={<Navigate to="/about" replace />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:slug" element={<Projects />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<Blog />} />
+      </Routes>
+    </motion.div>
+  );
+}
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState("home");
   const [bgReady, setBgReady] = useState(false);
 
   useEffect(() => {
     const img = new Image();
     img.src = cherryBlossoms;
-    img.onload = () => {
-      setBgReady(true);
-    }
+    img.onload = () => setBgReady(true);
   }, []);
 
   if (!bgReady) {
     return (
       <div className="fixed inset-0 bg-black flex items-center justify-center">
-        <img 
-          src="/favicon.ico" 
+        <img
+          src="/favicon.ico"
           alt="Loading..."
-          width={100} 
-          height={100} 
+          width={100}
+          height={100}
           className="animate-spin"
         />
       </div>
     );
   }
-  
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      {/* Fixed background image */}
       <div
         className="fixed inset-0 -z-10"
         style={{
@@ -46,11 +66,7 @@ export default function App() {
           backgroundBlendMode: "soft-light",
         }}
       />
-
-      {/* Fixed black overlay */}
       <div className="fixed inset-0 bg-black/35 -z-10" />
-
-      {/* Foreground content */}
       <div className="relative max-w-4xl mx-auto space-y-16 z-10 px-6 py-12">
         <motion.header
           initial={{ opacity: 0, y: -20 }}
@@ -58,46 +74,9 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="space-y-4"
         >
-          <Navbar setActiveSection={setActiveSection} />
+          <Navbar />
         </motion.header>
-
-        <AnimatePresence mode="wait">
-          {activeSection === "home" && (
-            <motion.section
-              key="home"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Home />
-            </motion.section>
-          )}
-
-          {activeSection === "about" && (
-            <motion.section
-              key="about"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <About />
-            </motion.section>
-          )}
-
-          {activeSection === "blog" && (
-            <motion.section
-              key="blog"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Blog />
-            </motion.section>
-          )}
-        </AnimatePresence>
+        <AnimatedRoutes />
       </div>
     </div>
   );

@@ -5,8 +5,8 @@
   "homepage": "https://aahil.io",
   "type": "module",
   "scripts": {
-    "predeploy" : "npm run build",
-    "deploy" : "echo \"aahil.io\" > dist/CNAME && gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "echo \"aahil.io\" > dist/CNAME && gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -21,6 +21,7 @@
     "lucide-react": "^0.487.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.13.2",
     "tailwind-merge": "^3.1.0",
     "tailwindcss": "^4.1.1",
     "tw-animate-css": "^1.2.5"
