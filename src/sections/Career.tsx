@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function Career() {
@@ -13,10 +14,10 @@ export default function Career() {
                 My immediate priority is getting into real research environments. I'm pursuing undergraduate research through GT's ORS program and reaching out directly to faculty working on MEMS and sensor systems, targeting at least two semesters of lab experience before I graduate. Alongside that I'm targeting R&D internships in analog hardware and sensor systems while also exploring embedded firmware and RTL roles to build out my understanding of the full hardware stack.
               </p>
               <p className="text-zinc-300 leading-relaxed">
-                A parallel goal is getting my <a href="/#/projects/river-sense" className="text-white hover:text-pink-300 underline transition-colors">RIVER-SENSE</a> work published. The platform was deployed at the Athens Water Treatment Plant and is targeting submission to <em>Water Research</em>. Seeing this through is both scientifically important and a lesson in what it takes to finish something properly.
+                A parallel goal is getting my <Link to="/projects/river-sense" className="text-white hover:text-pink-300 underline transition-colors">RIVER-SENSE</Link> work published. The platform was deployed at the Athens Water Treatment Plant and is targeting submission to <em>Water Research</em>. Seeing this through is both scientifically important and a lesson in what it takes to finish something properly.
               </p>
               <p className="text-zinc-300 leading-relaxed">
-                I'm also building a YouTube series around my <a href="/#/projects/accelerometer" className="text-white hover:text-pink-300 underline transition-colors">Macro Electromechanical Accelerometer</a> project. The full arc from a naive question about how MEMS accelerometers work, through 200+ hours of fabrication and failed assumptions, to the accidental discovery that changed the design entirely, and eventually what it takes to make my version hold up against a real accelerometer when tested in a car. Growing up, I was inspired by the absurd projects from StuffMadeHere and the transparent electronics explations from Ben Eater. This is how I pay that forward.
+                I'm also building a YouTube series around my <Link to="/projects/accelerometer" className="text-white hover:text-pink-300 underline transition-colors">Macro Electromechanical Accelerometer</Link> project. The full arc from a naive question about how MEMS accelerometers work, through 200+ hours of fabrication and failed assumptions, to the accidental discovery that changed the design entirely, and eventually what it takes to make my version hold up against a real accelerometer when tested in a car. Growing up, I was inspired by the absurd projects from StuffMadeHere and the transparent electronics explations from Ben Eater. This is how I pay that forward.
               </p>
               <p className="text-zinc-300 leading-relaxed">
                 I expect to graduate in 2028, though a combined BS/MS could extend that by a year.

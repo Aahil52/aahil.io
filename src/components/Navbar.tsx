@@ -40,7 +40,7 @@ export default function Navbar() {
         <button onClick={() => navigate("/career")} className="cursor-pointer hover:text-pink-300 hover:underline transition-colors">career</button>
         <button onClick={() => navigate("/projects")} className="cursor-pointer hover:text-pink-300 hover:underline transition-colors">projects</button>
         <button onClick={() => navigate("/blog")} className="cursor-pointer hover:text-pink-300 hover:underline transition-colors">blog</button>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-pink-300 hover:underline transition-colors">resume</a>
+        <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-pink-300 hover:underline transition-colors">resume</a>
       </nav>
     </div>
   );

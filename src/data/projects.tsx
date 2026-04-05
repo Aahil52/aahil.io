@@ -94,7 +94,7 @@ export const projects = [
         </p>
 
         <a
-          href="/accelerometer-report.pdf"
+          href={`${import.meta.env.BASE_URL}accelerometer-report.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-white hover:text-pink-300 hover:underline block mt-4"

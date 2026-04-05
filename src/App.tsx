@@ -44,7 +44,7 @@ export default function App() {
     return (
       <div className="fixed inset-0 bg-black flex items-center justify-center">
         <img
-          src="/favicon.ico"
+          src={`${import.meta.env.BASE_URL}favicon.ico`}
           alt="Loading..."
           width={100}
           height={100}
