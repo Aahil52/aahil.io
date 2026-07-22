@@ -20,7 +20,7 @@ export default function Career() {
                 I'm also building a YouTube series around my <Link to="/projects/accelerometer" className="text-white hover:text-pink-300 underline transition-colors">Macro Electromechanical Accelerometer</Link> project. The full arc from a naive question about how MEMS accelerometers work, through 200+ hours of fabrication and failed assumptions, to the accidental discovery that changed the design entirely, and eventually what it takes to make my version hold up against a real accelerometer when tested in a car. Growing up, I was inspired by the absurd projects from StuffMadeHere and the transparent electronics explations from Ben Eater. This is how I pay that forward.
               </p>
               <p className="text-zinc-300 leading-relaxed">
-                I expect to graduate in 2028, though a combined BS/MS could extend that by a year.
+                I expect to graduate in 2027, though a combined BS/MS could extend that by a year.
               </p>
             </div>
           </div>

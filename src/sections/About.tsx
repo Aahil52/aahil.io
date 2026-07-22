@@ -8,7 +8,7 @@ export default function About() {
       <Card className="bg-zinc-800/80 border-white transition-colors duration-300">
         <CardContent className="p-6 space-y-6">
           <p className="text-zinc-300 leading-relaxed">
-            I'm Aahil, a third-year in electrical engineering at Georgia Tech who builds sensors and the signal chains that make them useful. My work lives at the boundary between physics and information: figuring out how to turn a physical phenomenon into a clean, interpretable electrical signal, and then making that signal useful.
+            I'm Aahil, a fourth-year in electrical engineering at Georgia Tech who builds sensors and the signal chains that make them useful. My work lives at the boundary between physics and information: figuring out how to turn a physical phenomenon into a clean, interpretable electrical signal, and then making that signal useful.
           </p>
           <p className="text-zinc-300 leading-relaxed">
             Most of what I build starts as a question, a frustration, or even an epiphany sparked by seemingly unrelated study. I wanted to understand how MEMS accelerometers actually work, <Link to="/projects/accelerometer" className="text-white hover:text-pink-300 underline transition-colors">so naturally I spent 200+ hours building one at macro scale from PLA and copper-foil tape</Link>. Along the way I discovered that driving an instrumentation amplifier past its bandwidth accidentally produced the demodulation behavior I needed. That kind of unintuitive insight is what drives my obsessive curiosity and allows me to sit with confusion long enough to get through the hardest problems.
